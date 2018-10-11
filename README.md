@@ -1,4 +1,4 @@
-# mental-health-analytics
+# Mental health analytics
 
 ### Dataset Information
 
@@ -39,3 +39,35 @@ This dataset is from a 2014 survey that measures attitudes towards mental health
 > How does the frequency of mental health illness and attitudes (other factors in datasets) towards mental health vary by geographic location?
 
 > What are the strongest predictors of mental health illness treatment?
+
+
+
+# Answers
+
+### 1.Сonclusions from the visualization:
+
+- The largest number of respondents from the United States. They are relatively equally distributed. UK and Canada are too.
+- But indicators for other countries are not enough.
+- So, we can't say that it depends on the location.We dont have enough information
+- We need to pay attention on correlation with country. (no_employees: 0.31) , (work_interfere: -0.39)
+
+
+### 2.We need to pay attention on next correlation:
+
+(coworkers / phys_health_consequence: 0.57), (mental_health_consequence: 0.51), (treatment / family_history: 0.49), (coworkers / leave: -0.577)
+
+I use LightgbmClassifier for prediction consequences for coworkers with mental health conditions in your workplace. So, this model takes into account the following indicators:
+
+- age
+- no_employees
+- leave
+- work_interfere
+
+
+### Some visualizations:
+
+![alt text](https://2.bp.blogspot.com/-G2feM1Rwox0/WzTYqx57wJI/AAAAAAAAAGA/7cQH_OvPQCwXQyXPp8kH2r7voE67d4zeACLcBGAs/s640/Plot%2B3.png)
+
+![alt text](https://2.bp.blogspot.com/-Bm_2MgWgrNM/WzTYqwF5aXI/AAAAAAAAAF8/V357kCQr8BojxgR7XCYqmjxCYzw4fZ01wCLcBGAs/s640/Plot%2B5.png)
+
+![alt text](https://2.bp.blogspot.com/-cm4nKcNYSXY/WzTYqyvCJTI/AAAAAAAAAGE/bOiXBFoP8ZIs46rUiy2geZaYcewIFH6MACLcBGAs/s640/Screenshot%2Bfrom%2B2018-06-28%2B15-12-27.png)
